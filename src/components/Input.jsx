@@ -4,12 +4,10 @@ import { InputContext } from "../App";
 const Input = () => {
     const { string, setString } = useContext(InputContext);
 
-    const inputHendler = () => {
+    const input = () => {
         const input = document.querySelector('input');
         return input.value;
     }
-
-    // const result = inputHendler();
 
     return (
         <form className="input" >
@@ -18,7 +16,7 @@ const Input = () => {
 
             <button onClick={(e) => {
                 e.preventDefault();
-                let result = inputHendler();
+                let result = input();
                 setString(result);
             }}>Submit</button>
 
